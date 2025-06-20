@@ -6,12 +6,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import { AuthGuard } from "@/components/auth/AuthGuard";
+import { SignupForm } from "@/components/auth/SignupForm";
 import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import Humanizer from "./pages/Humanizer";
 import Verification from "./pages/Verification";
 import Scanner from "./pages/Scanner";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
