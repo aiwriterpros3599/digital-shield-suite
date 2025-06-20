@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Shield, FileText, Image, Search, Users, TrendingUp, Zap } from 'lucide-react';
-import { DashboardHeader } from '../components/dashboard/DashboardHeader';
+import { DashboardLayout } from '../components/dashboard/DashboardLayout';
 import { ToolCard } from '../components/dashboard/ToolCard';
 import { StatsCard } from '../components/dashboard/StatsCard';
 import { RecentActivity } from '../components/dashboard/RecentActivity';
@@ -44,10 +44,8 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 dark:from-slate-900 dark:via-blue-900 dark:to-cyan-900">
-      <DashboardHeader />
-      
-      <main className="container mx-auto px-6 py-8">
+    <DashboardLayout>
+      <div className="space-y-8">
         {/* Welcome Section */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
@@ -64,14 +62,14 @@ const Index = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, index) => (
             <StatsCard key={index} {...stat} />
           ))}
         </div>
 
         {/* Tools Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {tools.map((tool) => (
             <ToolCard key={tool.id} {...tool} />
           ))}
@@ -80,7 +78,7 @@ const Index = () => {
         {/* Recent Activity */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <RecentActivity />
-          <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200 dark:border-gray-700 p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Actions</h3>
             </div>
@@ -100,8 +98,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </DashboardLayout>
   );
 };
 
