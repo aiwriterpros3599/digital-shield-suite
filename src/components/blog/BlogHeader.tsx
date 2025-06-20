@@ -2,7 +2,15 @@
 import React from 'react';
 import { useTheme } from '@/hooks/useTheme';
 import { Button } from '@/components/ui/button';
-import { PenTool, Bell } from 'lucide-react';
+import { PenTool, Bell, ChevronDown } from 'lucide-react';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
 
 export const BlogHeader: React.FC = () => {
   const { theme } = useTheme();
@@ -25,24 +33,72 @@ export const BlogHeader: React.FC = () => {
             </a>
           </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <Button variant="ghost" asChild>
-              <a href="/dashboard">Dashboard</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/blog">Blog</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/humanizer">AI Humanizer</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/verification">Image Verification</a>
-            </Button>
-            <Button variant="ghost" asChild>
-              <a href="/scanner">Content Scanner</a>
-            </Button>
-          </nav>
+          {/* Enhanced Navigation Menu */}
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                  Home
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Tools</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[400px]">
+                    <div className="grid grid-cols-1 gap-3">
+                      <NavigationMenuLink href="/humanizer" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">AI Humanizer</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Convert AI-generated content to human-like text
+                        </p>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/verification" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Image Verification</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Detect deepfakes and manipulated images
+                        </p>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/scanner" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Content Scanner</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Scan for content theft and plagiarism
+                        </p>
+                      </NavigationMenuLink>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/blog" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                  Blog
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[300px]">
+                    <div className="grid grid-cols-1 gap-3">
+                      <NavigationMenuLink href="/docs" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Documentation</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          API docs and integration guides
+                        </p>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/support" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Support</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Get help and contact support
+                        </p>
+                      </NavigationMenuLink>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           {/* Actions */}
           <div className="flex items-center gap-4">

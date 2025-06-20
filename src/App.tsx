@@ -14,6 +14,7 @@ import Verification from "./pages/Verification";
 import Scanner from "./pages/Scanner";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
+import BlogAdmin from "./pages/BlogAdmin";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,11 @@ const App = () => (
             <Route path="/scanner" element={
               <AuthGuard>
                 <Scanner />
+              </AuthGuard>
+            } />
+            <Route path="/blog-admin" element={
+              <AuthGuard>
+                <BlogAdmin />
               </AuthGuard>
             } />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
