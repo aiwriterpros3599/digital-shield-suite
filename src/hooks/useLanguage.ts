@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 
-type Language = 'en' | 'es' | 'fr' | 'de' | 'pt';
+export type Language = 'en' | 'es' | 'fr' | 'de' | 'pt';
 
 const translations = {
   en: {

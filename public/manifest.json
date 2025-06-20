@@ -1,0 +1,32 @@
+
+{
+  "name": "Brand Protection Toolkit",
+  "short_name": "BrandProtect",
+  "description": "Professional 3-in-1 SaaS suite for brand protection: AI content humanization, image verification, and content theft detection.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/lovable-uploads/9e0576e3-cd88-436e-a3be-a8df7bac4b44.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/lovable-uploads/9e0576e3-cd88-436e-a3be-a8df7bac4b44.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/9e0576e3-cd88-436e-a3be-a8df7bac4b44.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}
