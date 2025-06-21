@@ -32,9 +32,17 @@ const App = () => (
             <Route path="/" element={<Landing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/signup" element={<SignupForm />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/tools/ai-text-humanizer" element={<AiTextHumanizerSales />} />
             <Route path="/tools/image-verification" element={<ImageVerificationSales />} />
             <Route path="/tools/content-theft-detection" element={<ContentTheftDetectionSales />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cookies" element={<Cookies />} />
+            <Route path="/dmca" element={<Dmca />} />
             <Route path="/dashboard" element={
               <AuthGuard>
                 <Index />

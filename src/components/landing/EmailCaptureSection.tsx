@@ -1,12 +1,13 @@
 
 import React, { useState } from 'react';
 import { Download, Mail, CheckCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const EmailCaptureSection = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -15,34 +16,9 @@ export const EmailCaptureSection = () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    setIsSubmitted(true);
-    setIsLoading(false);
+    // Navigate to thank you page
+    navigate('/thank-you');
   };
-
-  if (isSubmitted) {
-    return (
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700">
-        <div className="container mx-auto px-6 text-center">
-          <div className="max-w-2xl mx-auto">
-            <CheckCircle className="h-16 w-16 text-white mx-auto mb-6" />
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Thank You!
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Your free Brand Protection Checklist is being sent to your email. 
-              Check your inbox (and spam folder) in the next few minutes.
-            </p>
-            <button 
-              onClick={() => setIsSubmitted(false)}
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700">

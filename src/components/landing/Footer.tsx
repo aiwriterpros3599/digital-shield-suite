@@ -30,10 +30,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">AI Humanizer</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Image Verification</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Content Scanner</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/tools/ai-text-humanizer" className="hover:text-white transition-colors">AI Humanizer</a></li>
+              <li><a href="/tools/image-verification" className="hover:text-white transition-colors">Image Verification</a></li>
+              <li><a href="/tools/content-theft-detection" className="hover:text-white transition-colors">Content Scanner</a></li>
+              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
             </ul>
           </div>
 
@@ -41,10 +41,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/help" className="hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
             </ul>
           </div>
 
@@ -52,10 +52,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">DMCA Policy</a></li>
+              <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a></li>
+              <li><a href="/dmca" className="hover:text-white transition-colors">DMCA Policy</a></li>
             </ul>
           </div>
         </div>
