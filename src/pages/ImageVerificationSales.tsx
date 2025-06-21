@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { BlogHeader } from '@/components/blog/BlogHeader';
 import { Button } from '@/components/ui/button';
@@ -16,7 +15,7 @@ import {
   Award,
   Camera,
   Video,
-  Blockchain,
+  Link,
   FileText,
   Clock,
   Globe,
@@ -33,7 +32,7 @@ const ImageVerificationSales = () => {
       description: "99.7% accuracy in identifying AI-generated faces and synthetic media content"
     },
     {
-      icon: <Blockchain className="h-6 w-6" />,
+      icon: <Link className="h-6 w-6" />,
       title: "Blockchain Verification",
       description: "Immutable proof of authenticity with legal-grade evidence preservation"
     },
@@ -421,7 +420,7 @@ const ImageVerificationSales = () => {
             <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-center">
               <CardHeader>
                 <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Blockchain className="h-8 w-8 text-green-600 dark:text-green-400" />
+                  <Link className="h-8 w-8 text-green-600 dark:text-green-400" />
                 </div>
                 <CardTitle>Blockchain Proof</CardTitle>
               </CardHeader>
