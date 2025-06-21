@@ -19,7 +19,7 @@ export const BlogHeader: React.FC = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md dark:bg-gray-900/80 dark:border-gray-700">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - 3x larger */}
           <div className="flex items-center gap-4">
             <a href="/" className="flex items-center gap-3">
               <img 
@@ -28,7 +28,7 @@ export const BlogHeader: React.FC = () => {
                   : "/lovable-uploads/5b98e63e-4ee7-4638-8982-319d0bc3d2fb.png"
                 }
                 alt="Brand Protection Toolkit"
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </a>
           </div>
@@ -47,22 +47,22 @@ export const BlogHeader: React.FC = () => {
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px]">
                     <div className="grid grid-cols-1 gap-3">
-                      <NavigationMenuLink href="/humanizer" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                        <div className="text-sm font-medium leading-none">AI Humanizer</div>
+                      <NavigationMenuLink href="/tools/ai-text-humanizer" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">AI Text Humanizer</div>
                         <p className="text-xs leading-snug text-muted-foreground">
-                          Convert AI-generated content to human-like text
+                          Make AI content undetectable and human-like
                         </p>
                       </NavigationMenuLink>
-                      <NavigationMenuLink href="/verification" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                        <div className="text-sm font-medium leading-none">Image Verification</div>
+                      <NavigationMenuLink href="/tools/image-verification" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Image Verification Tool</div>
                         <p className="text-xs leading-snug text-muted-foreground">
-                          Detect deepfakes and manipulated images
+                          Detect AI-generated images and deepfakes
                         </p>
                       </NavigationMenuLink>
-                      <NavigationMenuLink href="/scanner" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                        <div className="text-sm font-medium leading-none">Content Scanner</div>
+                      <NavigationMenuLink href="/tools/content-theft-detection" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Content Theft Detector</div>
                         <p className="text-xs leading-snug text-muted-foreground">
-                          Scan for content theft and plagiarism
+                          Monitor and protect your content from plagiarism
                         </p>
                       </NavigationMenuLink>
                     </div>

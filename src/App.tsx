@@ -15,6 +15,9 @@ import Scanner from "./pages/Scanner";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogAdmin from "./pages/BlogAdmin";
+import AiTextHumanizerSales from "./pages/AiTextHumanizerSales";
+import ImageVerificationSales from "./pages/ImageVerificationSales";
+import ContentTheftDetectionSales from "./pages/ContentTheftDetectionSales";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,9 @@ const App = () => (
             <Route path="/" element={<Landing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/signup" element={<SignupForm />} />
+            <Route path="/tools/ai-text-humanizer" element={<AiTextHumanizerSales />} />
+            <Route path="/tools/image-verification" element={<ImageVerificationSales />} />
+            <Route path="/tools/content-theft-detection" element={<ContentTheftDetectionSales />} />
             <Route path="/dashboard" element={
               <AuthGuard>
                 <Index />
