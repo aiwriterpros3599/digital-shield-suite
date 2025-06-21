@@ -100,10 +100,10 @@ const Cookies = () => {
               You can control cookies through your browser settings:
             </p>
             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4">
-              <li><strong>Chrome:</strong> Settings > Privacy and Security > Cookies</li>
-              <li><strong>Firefox:</strong> Options > Privacy & Security > Cookies</li>
-              <li><strong>Safari:</strong> Preferences > Privacy > Cookies</li>
-              <li><strong>Edge:</strong> Settings > Cookies and site permissions</li>
+              <li><strong>Chrome:</strong> Settings &gt; Privacy and Security &gt; Cookies</li>
+              <li><strong>Firefox:</strong> Options &gt; Privacy &amp; Security &gt; Cookies</li>
+              <li><strong>Safari:</strong> Preferences &gt; Privacy &gt; Cookies</li>
+              <li><strong>Edge:</strong> Settings &gt; Cookies and site permissions</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">5.2 Cookie Consent</h3>
