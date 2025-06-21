@@ -18,7 +18,8 @@ import {
   Award,
   FileText,
   Eye,
-  Clock
+  Clock,
+  Upload
 } from 'lucide-react';
 
 const ContentTheftDetectionSales = () => {
