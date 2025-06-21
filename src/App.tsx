@@ -18,6 +18,14 @@ import BlogAdmin from "./pages/BlogAdmin";
 import AiTextHumanizerSales from "./pages/AiTextHumanizerSales";
 import ImageVerificationSales from "./pages/ImageVerificationSales";
 import ContentTheftDetectionSales from "./pages/ContentTheftDetectionSales";
+import ThankYou from "./pages/ThankYou";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Help from "./pages/Help";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Cookies from "./pages/Cookies";
+import Dmca from "./pages/Dmca";
 
 const queryClient = new QueryClient();
 
