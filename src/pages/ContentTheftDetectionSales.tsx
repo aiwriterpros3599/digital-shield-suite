@@ -19,7 +19,11 @@ import {
   FileText,
   Eye,
   Clock,
-  Upload
+  Upload,
+  Gavel,
+  MessageSquare,
+  BarChart3,
+  Zap
 } from 'lucide-react';
 
 const ContentTheftDetectionSales = () => {
@@ -31,75 +35,176 @@ const ContentTheftDetectionSales = () => {
 
   const features = [
     {
-      icon: <Search className="h-6 w-6" />,
-      title: "Advanced Similarity Detection",
-      description: "AI-powered algorithms detect exact matches, paraphrasing, and translation theft"
-    },
-    {
-      icon: <Clock className="h-6 w-6" />,
-      title: "24/7 Automated Monitoring",
-      description: "Continuous web scanning to catch content theft as it happens"
-    },
-    {
       icon: <Globe className="h-6 w-6" />,
-      title: "Global Web Coverage",
-      description: "Monitors billions of web pages, social media, and content platforms"
+      title: "Multi-Language Detection",
+      description: "Catch global content theft across 40+ languages with advanced translation detection"
+    },
+    {
+      icon: <Gavel className="h-6 w-6" />,
+      title: "Automated DMCA Filing",
+      description: "Save 10+ hours per case with one-click DMCA generation and automated sending"
     },
     {
       icon: <FileText className="h-6 w-6" />,
-      title: "DMCA Automation",
-      description: "Automatically generate and send DMCA takedown notices"
+      title: "Legal Case Management",
+      description: "Complete case tracking from detection to resolution with evidence preservation"
+    },
+    {
+      icon: <MessageSquare className="h-6 w-6" />,
+      title: "Brand Monitoring",
+      description: "Track brand mentions across all major social platforms with sentiment analysis"
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Evidence Blockchain",
+      description: "Immutable proof preservation for legal proceedings with timestamp verification"
+    },
+    {
+      icon: <BarChart3 className="h-6 w-6" />,
+      title: "Domain Authority Assessment",
+      description: "Evaluate infringing sites and prioritize enforcement based on impact scores"
+    }
+  ];
+
+  const monitoringCapabilities = [
+    {
+      platform: "Social Media Monitoring",
+      scope: "Facebook, Twitter, LinkedIn, Instagram, TikTok, YouTube",
+      features: ["Real-time content scanning", "Sentiment analysis", "Viral detection alerts", "Brand mention tracking"]
+    },
+    {
+      platform: "Web Content Scanning",
+      scope: "Blogs, news sites, e-commerce platforms, forums",
+      features: ["Paraphrasing detection", "Translation theft identification", "Image content matching", "SEO impact analysis"]
+    },
+    {
+      platform: "Professional Networks",
+      scope: "Academia, business publications, industry forums",
+      features: ["Citation analysis", "Plagiarism scoring", "Professional reputation monitoring", "Authority source tracking"]
     }
   ];
 
   const targetAudiences = [
     {
-      title: "Content Creators",
+      title: "Content Creators & Influencers",
       subtitle: "Bloggers, YouTubers, Course Creators",
       challenges: ["Content scraping and republishing", "Revenue loss from stolen content", "Brand reputation damage"],
-      benefits: ["Protect income streams", "Maintain content exclusivity", "Build stronger brand authority"]
+      benefits: ["Protect income streams", "Maintain content exclusivity", "Build stronger brand authority"],
+      results: "85% reduction in content theft incidents"
     },
     {
-      title: "Businesses",
-      subtitle: "Marketing Agencies, E-commerce, SaaS",
-      challenges: ["Competitors stealing marketing content", "Product descriptions being copied", "Brand messaging theft"],
-      benefits: ["Competitive advantage protection", "Brand consistency", "Legal compliance"]
+      title: "Marketing Agencies",
+      subtitle: "Digital Marketing, Content Marketing, SEO Agencies",
+      challenges: ["Client content being stolen", "Competitor content theft", "Brand messaging theft"],
+      benefits: ["Client IP protection", "Competitive advantage maintenance", "Brand consistency enforcement"],
+      results: "10+ hours saved per case with automated DMCA"
     },
     {
-      title: "Publishers",
-      subtitle: "News Sites, Magazines, Academic",
-      challenges: ["Article syndication without permission", "Image and content theft", "Citation and attribution issues"],
-      benefits: ["Editorial integrity", "Revenue protection", "Copyright enforcement"]
+      title: "Publishers & Media",
+      subtitle: "News Sites, Magazines, Online Publications",
+      challenges: ["Article syndication without permission", "Image and content theft", "Attribution issues"],
+      benefits: ["Editorial integrity protection", "Revenue stream security", "Copyright enforcement automation"],
+      results: "95% success rate in content takedowns"
     },
     {
       title: "Legal Professionals",
-      subtitle: "IP Lawyers, Compliance Teams",
+      subtitle: "IP Lawyers, Compliance Teams, Corporate Legal",
       challenges: ["Manual monitoring inefficiency", "Evidence collection difficulties", "Complex IP enforcement"],
-      benefits: ["Automated evidence gathering", "Streamlined enforcement", "Better client outcomes"]
+      benefits: ["Automated evidence gathering", "Streamlined case management", "Blockchain proof preservation"],
+      results: "60% faster case resolution time"
+    }
+  ];
+
+  const legalTools = [
+    {
+      name: "Automated DMCA Filing",
+      description: "One-click generation and sending of legally compliant DMCA takedown notices",
+      timesSaved: "10+ hours per case",
+      successRate: "94%"
+    },
+    {
+      name: "Legal Case Management",
+      description: "Complete tracking from detection to resolution with evidence timeline",
+      timesSaved: "15+ hours per case",
+      successRate: "89%"
+    },
+    {
+      name: "Evidence Blockchain Preservation",
+      description: "Immutable proof storage with legal-grade timestamp verification",
+      timesSaved: "5+ hours per case",
+      successRate: "100%"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Marcus Thompson",
+      role: "IP Attorney",
+      company: "Thompson & Associates",
+      content: "The automated DMCA filing saves us 10+ hours per case while maintaining 94% success rate. The blockchain evidence storage is revolutionary for IP litigation.",
+      rating: 5,
+      results: "94% DMCA success rate, 10+ hours saved per case"
+    },
+    {
+      name: "Elena Rodriguez",
+      role: "Content Strategy Director", 
+      company: "Creative Digital Agency",
+      content: "Multi-language detection caught content theft we never would have found manually. Our client's content is now protected globally across 40+ languages.",
+      rating: 5,
+      results: "Global content protection across 40+ languages"
+    },
+    {
+      name: "James Wilson", 
+      role: "Chief Marketing Officer",
+      company: "SaaS Growth Partners",
+      content: "The brand monitoring across social platforms gives us complete visibility. We catch competitor theft attempts before they damage our reputation.",
+      rating: 5,
+      results: "Complete brand protection across all platforms"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$49",
-      period: "/month",
-      features: ["Monitor up to 50 pieces of content", "Weekly scans", "Basic reporting", "Email alerts", "DMCA templates"],
-      popular: false
-    },
-    {
-      name: "Business",
+      name: "Professional",
       price: "$149",
       period: "/month",
-      features: ["Monitor up to 500 pieces of content", "Daily scans", "Advanced analytics", "Real-time alerts", "Automated DMCA", "API access"],
-      popular: true
+      description: "For agencies, publishers, and growing businesses",
+      features: [
+        "Monitor up to 500 pieces of content",
+        "Daily scans across all platforms",
+        "Multi-language detection (40+ languages)",
+        "Basic DMCA templates",
+        "Social media monitoring",
+        "Email alerts and reporting",
+        "API access (5K requests/month)",
+        "Evidence preservation (1 year)",
+        "Standard support (24h response)"
+      ],
+      popular: true,
+      highlight: "Most Popular"
     },
     {
       name: "Enterprise",
       price: "$399",
-      period: "/month",
-      features: ["Unlimited content monitoring", "Real-time scanning", "Custom reports", "Dedicated support", "Legal consultation", "White-label option"],
-      popular: false
+      period: "/month", 
+      description: "Complete IP protection for organizations",
+      features: [
+        "Unlimited content monitoring",
+        "Real-time scanning and alerts",
+        "Advanced multi-language detection",
+        "Automated DMCA filing system",
+        "Complete legal case management",
+        "Brand mention sentiment analysis",
+        "Evidence blockchain preservation",
+        "Domain authority assessment",
+        "Custom legal document generation",
+        "Full API access + webhooks",
+        "Priority phone support (2h response)",
+        "Dedicated account manager",
+        "Legal consultation included"
+      ],
+      popular: false,
+      highlight: "Enterprise Ready"
     }
   ];
 
@@ -114,7 +219,7 @@ const ContentTheftDetectionSales = () => {
           <ArrowRight className="h-3 w-3" />
           <span>Tools</span>
           <ArrowRight className="h-3 w-3" />
-          <span className="text-green-600 dark:text-green-400">Content Theft Detection</span>
+          <span className="text-green-600 dark:text-green-400">Content Theft Detection & IP Protection</span>
         </div>
       </div>
 
@@ -123,73 +228,84 @@ const ContentTheftDetectionSales = () => {
         <section className="text-center py-16">
           <div className="max-w-4xl mx-auto">
             <Badge className="mb-4 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-              #1 Content Protection Platform
+              #1 IP Protection Platform
             </Badge>
             <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Content Theft Detection - Protect Your Intellectual Property
+              Automated DMCA Filing Saves 10+ Hours Per Case
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Comprehensive content protection tool. Detect plagiarism, monitor content theft & generate DMCA notices. Protect your intellectual property 24/7 with automated monitoring and enforcement.
+              Multi-language detection catches global content theft. Legal case management from detection to resolution. Brand monitoring across all major social platforms. Complete IP protection with blockchain evidence preservation.
             </p>
             
-            {/* Monitoring Dashboard Preview */}
+            {/* Enhanced Monitoring Dashboard Preview */}
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl mb-8">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
-                Monitor & Protect Your Content 24/7
+                Comprehensive Protection Dashboard
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                 <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600 dark:text-gray-400">Protected Content</span>
                     <Shield className="h-4 w-4 text-green-500" />
                   </div>
-                  <p className="text-2xl font-bold text-green-600 dark:text-green-400">1,247</p>
+                  <p className="text-2xl font-bold text-green-600 dark:text-green-400">2,847</p>
+                  <p className="text-xs text-gray-500">Across 40+ languages</p>
                 </div>
                 <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600 dark:text-gray-400">Theft Detected</span>
                     <AlertTriangle className="h-4 w-4 text-red-500" />
                   </div>
-                  <p className="text-2xl font-bold text-red-600 dark:text-red-400">23</p>
+                  <p className="text-2xl font-bold text-red-600 dark:text-red-400">47</p>
+                  <p className="text-xs text-gray-500">This month</p>
                 </div>
                 <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600 dark:text-gray-400">DMCA Sent</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">DMCA Filed</span>
                     <FileText className="h-4 w-4 text-blue-500" />
                   </div>
-                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">18</p>
+                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">44</p>
+                  <p className="text-xs text-gray-500">94% success rate</p>
+                </div>
+                <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">Cases Resolved</span>
+                    <Gavel className="h-4 w-4 text-purple-500" />
+                  </div>
+                  <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">38</p>
+                  <p className="text-xs text-gray-500">60% faster resolution</p>
                 </div>
               </div>
             </div>
 
             <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 text-lg">
-              Start Protecting Now
+              Start Protecting Your IP Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </section>
 
-        {/* Content Protection Challenges */}
+        {/* Content Theft Impact */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Content Theft is Costing You Money
+              Content Theft Costs More Than You Think
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Every day, your valuable content is being stolen, republished, and monetized by others. This damages your brand, reduces your search rankings, and directly impacts your revenue.
+              Every day, your valuable content is being stolen, republished, and monetized by others. This impacts your revenue, search rankings, and brand reputation across global markets.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { title: "Revenue Loss", value: "$50K+", description: "Average annual loss from content theft" },
-              { title: "SEO Impact", value: "40%", description: "Drop in search rankings from duplicate content" },
-              { title: "Brand Damage", value: "73%", description: "Of consumers lose trust due to content inconsistency" },
-              { title: "Time Wasted", value: "20hrs", description: "Weekly hours spent on manual monitoring" }
+              { title: "Revenue Loss", value: "$75K+", description: "Average annual loss from global content theft", color: "red" },
+              { title: "SEO Impact", value: "45%", description: "Drop in search rankings from duplicate content", color: "orange" },
+              { title: "Brand Damage", value: "68%", description: "Of consumers lose trust due to content inconsistency", color: "yellow" },
+              { title: "Legal Costs", value: "$25K+", description: "Average cost per IP litigation case", color: "purple" }
             ].map((stat, index) => (
               <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-center">
                 <CardHeader>
-                  <CardTitle className="text-3xl font-bold text-red-600 dark:text-red-400">{stat.value}</CardTitle>
+                  <CardTitle className={`text-3xl font-bold text-${stat.color}-600 dark:text-${stat.color}-400`}>{stat.value}</CardTitle>
                   <CardDescription className="font-semibold text-gray-900 dark:text-white">{stat.title}</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -200,18 +316,18 @@ const ContentTheftDetectionSales = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Enhanced Features Section */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Comprehensive Protection Features
+              Complete IP Protection Suite
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Advanced technology to detect, monitor, and stop content theft
+              Advanced technology to detect, monitor, enforce, and resolve content theft globally
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-0 shadow-lg">
                 <CardHeader>
@@ -230,14 +346,94 @@ const ContentTheftDetectionSales = () => {
           </div>
         </section>
 
+        {/* Monitoring Capabilities */}
+        <section className="py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Comprehensive Monitoring Scope
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Track your content across every major platform and detect theft before it impacts your business
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            {monitoringCapabilities.map((capability, index) => (
+              <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Globe className="h-5 w-5 text-green-600" />
+                    {capability.platform}
+                  </CardTitle>
+                  <CardDescription className="text-green-600 dark:text-green-400 font-medium">
+                    {capability.scope}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                    {capability.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <CheckCircle className="h-3 w-3 text-green-500" />
+                        <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Legal Tools Showcase */}
+        <section className="py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Professional Legal Tools
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Streamline IP enforcement with automated legal processes and case management
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {legalTools.map((tool, index) => (
+              <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Gavel className="h-5 w-5 text-blue-600" />
+                    {tool.name}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">{tool.description}</p>
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">Time Saved:</span>
+                      <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                        {tool.timesSaved}
+                      </Badge>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">Success Rate:</span>
+                      <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                        {tool.successRate}
+                      </Badge>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         {/* Target Audience Sections */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Built for Every Content Creator
+              Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Tailored solutions for different industries and use cases
+              Tailored solutions delivering measurable results across different industries
             </p>
           </div>
           
@@ -245,7 +441,10 @@ const ContentTheftDetectionSales = () => {
             {targetAudiences.map((audience, index) => (
               <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
                 <CardHeader>
-                  <CardTitle className="text-xl">{audience.title}</CardTitle>
+                  <CardTitle className="text-xl flex items-center gap-2">
+                    <Users className="h-5 w-5 text-green-600" />
+                    {audience.title}
+                  </CardTitle>
                   <CardDescription className="text-green-600 dark:text-green-400 font-medium">
                     {audience.subtitle}
                   </CardDescription>
@@ -274,6 +473,11 @@ const ContentTheftDetectionSales = () => {
                         ))}
                       </ul>
                     </div>
+                    <div className="pt-2 border-t">
+                      <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                        Result: {audience.results}
+                      </Badge>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -281,21 +485,21 @@ const ContentTheftDetectionSales = () => {
           </div>
         </section>
 
-        {/* ROI Calculator */}
+        {/* Enhanced ROI Calculator */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Calculate Your Potential Savings
+              Calculate Your IP Protection ROI
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              See how much you could save by protecting your content
+              See how much you could save with automated DMCA filing and legal case management
             </p>
           </div>
           
           <div className="max-w-2xl mx-auto">
             <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-center">ROI Calculator</CardTitle>
+                <CardTitle className="text-center">IP Protection ROI Calculator</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -327,14 +531,30 @@ const ContentTheftDetectionSales = () => {
                 </div>
                 
                 <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-                  <div className="text-center">
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Potential Monthly Savings</p>
-                    <p className="text-4xl font-bold text-green-600 dark:text-green-400">
-                      ${(roiCalculation.contentValue * roiCalculation.theftInstances * 0.3).toLocaleString()}
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                      Based on 30% revenue recovery from stopped content theft
-                    </p>
+                  <div className="text-center space-y-4">
+                    <div>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">Potential Monthly Savings</p>
+                      <p className="text-4xl font-bold text-green-600 dark:text-green-400">
+                        ${(roiCalculation.contentValue * roiCalculation.theftInstances * 0.4).toLocaleString()}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        Based on 40% revenue recovery from automated IP protection
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-green-200 dark:border-green-800">
+                      <div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">Time Saved</p>
+                        <p className="text-lg font-semibold text-green-600 dark:text-green-400">
+                          {roiCalculation.theftInstances * 10}+ hours/month
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">Legal Cost Reduction</p>
+                        <p className="text-lg font-semibold text-green-600 dark:text-green-400">
+                          ${(roiCalculation.theftInstances * 2500).toLocaleString()}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -342,34 +562,37 @@ const ContentTheftDetectionSales = () => {
           </div>
         </section>
 
-        {/* Monitoring Process */}
+        {/* Enhanced Testimonials */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              How Our Protection Works
+              Proven Results from Legal Professionals
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Automated 4-step process to protect your content
+              Real case studies showing measurable improvement in IP protection and enforcement
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "1", title: "Content Registration", description: "Add your content URLs or upload files for monitoring", icon: <Upload className="h-6 w-6" /> },
-              { step: "2", title: "Web Scanning", description: "Our AI scans billions of web pages for matches", icon: <Search className="h-6 w-6" /> },
-              { step: "3", title: "Theft Detection", description: "Advanced algorithms identify exact and paraphrased copies", icon: <Eye className="h-6 w-6" /> },
-              { step: "4", title: "Automated Enforcement", description: "Generate and send DMCA notices automatically", icon: <FileText className="h-6 w-6" /> }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center text-green-600 dark:text-green-400 mx-auto mb-4">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div className="border-t pt-4">
+                    <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
+                    <p className="text-sm text-green-600 dark:text-green-400">{testimonial.company}</p>
+                    <Badge className="mt-2 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs">
+                      {testimonial.results}
+                    </Badge>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </section>
@@ -378,19 +601,19 @@ const ContentTheftDetectionSales = () => {
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Choose Your Protection Level
+              Complete IP Protection Plans
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Comprehensive content protection for every budget
+              Choose the right level of protection for your content and intellectual property
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm`}>
                 {plan.popular && (
                   <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-green-600">
-                    Most Popular
+                    {plan.highlight}
                   </Badge>
                 )}
                 <CardHeader className="text-center">
@@ -399,18 +622,19 @@ const ContentTheftDetectionSales = () => {
                     <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
                     <span className="text-gray-600 dark:text-gray-300">{plan.period}</span>
                   </div>
+                  <CardDescription className="mt-2">{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
-                    Start Protection
+                    Start Protection Trial
                   </Button>
                 </CardContent>
               </Card>
@@ -422,20 +646,23 @@ const ContentTheftDetectionSales = () => {
         <section className="py-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Stop Losing Money to Content Thieves
+              Stop Losing Money to Content Thieves Today
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Join thousands of creators and businesses protecting their valuable content
+              Join thousands of creators, agencies, and legal professionals protecting their valuable intellectual property with automated enforcement
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 text-lg">
-                Start Free Trial
+                Start Free Trial - Protect Your First 10 Items Free
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
-                Schedule Consultation
+                Schedule Legal Consultation
               </Button>
             </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+              Free trial includes 10 content monitoring • Legal consultation available • No long-term contracts
+            </p>
           </div>
         </section>
       </main>

@@ -14,49 +14,126 @@ import {
   Star,
   Users,
   TrendingUp,
-  Award
+  Award,
+  Palette,
+  Settings,
+  Search,
+  BookOpen,
+  MessageSquare,
+  Globe
 } from 'lucide-react';
 
 const AiTextHumanizerSales = () => {
   const [activeDemo, setActiveDemo] = useState('before');
+  const [activeStyle, setActiveStyle] = useState('professional');
 
   const features = [
     {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Bypass AI Detection",
-      description: "Advanced algorithms that make AI content undetectable by all major AI detectors"
-    },
-    {
-      icon: <Target className="h-6 w-6" />,
+      icon: <Palette className="h-6 w-6" />,
       title: "Multiple Writing Styles",
-      description: "Academic, Creative, Professional, Casual, and Marketing tone options"
+      description: "Academic, Creative, Professional, and Casual modes with infinite tone adjustments"
     },
     {
-      icon: <Zap className="h-6 w-6" />,
-      title: "Real-time Analysis",
-      description: "Instant AI detection scoring with side-by-side comparison"
+      icon: <Search className="h-6 w-6" />,
+      title: "SEO Optimization Mode",
+      description: "Preserves target keywords while humanizing content for better search rankings"
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Built-in Plagiarism Detection",
+      description: "Real-time originality checking ensures your content is unique and authentic"
     },
     {
       icon: <TrendingUp className="h-6 w-6" />,
-      title: "SEO Optimization",
-      description: "Maintains keyword density and SEO value while humanizing content"
+      title: "Grammar & Readability Scoring",
+      description: "Professional scoring with actionable improvements for better content quality"
+    },
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "Team Collaboration",
+      description: "Version control, history tracking, and seamless team workflow management"
+    },
+    {
+      icon: <Zap className="h-6 w-6" />,
+      title: "Batch Processing",
+      description: "Process multiple documents simultaneously with API integration capabilities"
+    }
+  ];
+
+  const writingStyles = [
+    {
+      name: 'Academic',
+      description: 'Formal, research-focused tone with precise terminology',
+      example: 'The empirical evidence substantiates the hypothesis that artificial intelligence significantly enhances operational efficiency across diverse industrial sectors.'
+    },
+    {
+      name: 'Creative',
+      description: 'Engaging, imaginative language with vivid expressions',
+      example: 'AI has burst onto the scene like a digital renaissance, painting new possibilities across every industry canvas with bold, innovative strokes.'
+    },
+    {
+      name: 'Professional',
+      description: 'Clear, business-appropriate communication',
+      example: 'Artificial intelligence delivers measurable improvements in operational efficiency, helping businesses streamline processes and achieve better results.'
+    },
+    {
+      name: 'Casual',
+      description: 'Conversational, friendly tone for broad audiences',
+      example: 'AI is pretty amazing at making work easier and more efficient. Companies everywhere are seeing real benefits from using these smart tools.'
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Content Marketing Agencies",
+      subtitle: "Scale content production while maintaining quality",
+      challenges: ["High content volume demands", "Maintaining brand voice consistency", "Meeting tight deadlines"],
+      benefits: ["10x faster content production", "Consistent brand voice across all content", "Reduced revision cycles"]
+    },
+    {
+      title: "SEO Professionals",
+      subtitle: "Create search-optimized content at scale",
+      challenges: ["Keyword density optimization", "Content freshness requirements", "Avoiding AI detection penalties"],
+      benefits: ["Keyword preservation technology", "Fresh content variations", "100% undetectable humanization"]
+    },
+    {
+      title: "Academic Writers",
+      subtitle: "Enhance research communication",
+      challenges: ["Complex concept simplification", "Citation integration", "Academic tone consistency"],
+      benefits: ["Academic style optimization", "Citation-friendly formatting", "Scholarly tone enhancement"]
+    },
+    {
+      title: "Business Communications",
+      subtitle: "Professional internal and external communications",
+      challenges: ["Tone appropriateness", "Message clarity", "Brand consistency"],
+      benefits: ["Professional tone adjustment", "Clear message optimization", "Brand voice maintenance"]
     }
   ];
 
   const testimonials = [
     {
       name: "Sarah Johnson",
-      role: "Content Manager",
-      company: "TechCorp",
-      content: "This tool saved us hours of manual editing. Our AI-generated content now passes all detection tests.",
-      rating: 5
+      role: "Content Marketing Director",
+      company: "TechCorp Solutions",
+      content: "The multiple writing styles feature is a game-changer. We can match any client's brand voice perfectly while scaling our content production 5x.",
+      rating: 5,
+      results: "5x content production increase"
     },
     {
-      name: "Mike Chen",
-      role: "Digital Marketing Specialist",
-      company: "GrowthLab",
-      content: "Game-changer for our content strategy. We can scale content production without sacrificing quality.",
-      rating: 5
+      name: "Dr. Michael Chen",
+      role: "Research Communications Lead",
+      company: "Stanford Research Institute",
+      content: "The academic writing mode produces publication-ready content that maintains scientific accuracy while improving readability for broader audiences.",
+      rating: 5,
+      results: "40% improvement in research accessibility"
+    },
+    {
+      name: "Lisa Rodriguez",
+      role: "SEO Strategy Manager",
+      company: "Digital Growth Agency",
+      content: "SEO optimization mode is incredible - it preserves our target keywords while making AI content completely undetectable. Our rankings improved 30%.",
+      rating: 5,
+      results: "30% search ranking improvement"
     }
   ];
 
@@ -65,22 +142,42 @@ const AiTextHumanizerSales = () => {
       name: "Starter",
       price: "$29",
       period: "/month",
-      features: ["10,000 words/month", "Basic humanization", "3 writing styles", "Email support"],
-      popular: false
+      description: "Perfect for individual creators and small teams",
+      features: [
+        "500 humanizations/month (5K chars each)",
+        "4 writing styles with tone adjustment",
+        "SEO optimization mode",
+        "Built-in plagiarism checker",
+        "Grammar & readability scoring",
+        "Version control & history",
+        "Team collaboration (3 members)",
+        "API access (1K requests/month)",
+        "Priority support (12h response)"
+      ],
+      popular: true,
+      highlight: "Most Popular"
     },
     {
       name: "Professional",
       price: "$79",
       period: "/month",
-      features: ["50,000 words/month", "Advanced humanization", "All writing styles", "Priority support", "API access"],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      features: ["Unlimited words", "Custom training", "White-label option", "Dedicated support", "Custom integrations"],
-      popular: false
+      description: "Advanced features for agencies and enterprises",
+      features: [
+        "Unlimited humanizations (10K chars each)",
+        "All writing styles + custom tones",
+        "Advanced SEO optimization",
+        "Professional plagiarism detection",
+        "Advanced grammar analysis",
+        "Complete version management",
+        "Unlimited team members",
+        "Full API access + webhooks",
+        "Batch processing capabilities",
+        "White-label options",
+        "Dedicated account manager",
+        "Phone support (2h response)"
+      ],
+      popular: false,
+      highlight: "Enterprise Ready"
     }
   ];
 
@@ -95,7 +192,7 @@ const AiTextHumanizerSales = () => {
           <ArrowRight className="h-3 w-3" />
           <span>Tools</span>
           <ArrowRight className="h-3 w-3" />
-          <span className="text-blue-600 dark:text-blue-400">AI Text Humanizer</span>
+          <span className="text-blue-600 dark:text-blue-400">AI Text Humanizer Pro</span>
         </div>
       </div>
 
@@ -104,16 +201,16 @@ const AiTextHumanizerSales = () => {
         <section className="text-center py-16">
           <div className="max-w-4xl mx-auto">
             <Badge className="mb-4 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-              #1 AI Text Humanizer
+              #1 AI Text Humanizer Pro
             </Badge>
             <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              AI Text Humanizer - Make AI Content Undetectable
+              Transform AI Content into Authentic, Human-Like Text
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Transform AI-generated text to bypass detection tools. Our advanced humanization technology makes ChatGPT, Claude & other AI content undetectable while maintaining quality and meaning.
+              Advanced style control with 4 writing modes and infinite tone adjustments. Built-in SEO optimization preserves your target keywords while real-time plagiarism detection ensures originality.
             </p>
             
-            {/* Demo Section */}
+            {/* Enhanced Demo Section */}
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl mb-8">
               <div className="flex justify-center gap-4 mb-6">
                 <Button 
@@ -137,9 +234,14 @@ const AiTextHumanizerSales = () => {
                       <span className="text-sm font-medium">AI Detection Score:</span>
                       <Badge variant="destructive">89% AI Generated</Badge>
                     </div>
-                    <p className="text-gray-700 dark:text-gray-300">
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
                       Artificial intelligence has revolutionized numerous industries by providing innovative solutions that enhance efficiency and productivity. This technology enables organizations to process vast amounts of data and derive meaningful insights.
                     </p>
+                    <div className="flex items-center gap-4 text-sm text-gray-500">
+                      <span>Grammar Score: 85%</span>
+                      <span>Readability: Basic</span>
+                      <span>SEO: Not optimized</span>
+                    </div>
                   </>
                 ) : (
                   <>
@@ -147,62 +249,69 @@ const AiTextHumanizerSales = () => {
                       <span className="text-sm font-medium">AI Detection Score:</span>
                       <Badge variant="secondary">12% AI Generated</Badge>
                     </div>
-                    <p className="text-gray-700 dark:text-gray-300">
-                      AI has completely transformed how we work across countless industries, offering fresh approaches that boost both efficiency and results. Companies now harness this powerful technology to sift through enormous data sets and uncover valuable insights.
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">
+                      AI has completely transformed how we work across countless industries, offering fresh approaches that boost both efficiency and results. Companies now harness this powerful technology to sift through enormous data sets and uncover valuable insights that drive strategic decisions.
                     </p>
+                    <div className="flex items-center gap-4 text-sm text-green-600">
+                      <span>Grammar Score: 96%</span>
+                      <span>Readability: Excellent</span>
+                      <span>SEO: Optimized</span>
+                    </div>
                   </>
                 )}
               </div>
             </div>
 
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg">
-              Try AI Humanizer Free
+              Start Free Trial - No Credit Card Required
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </section>
 
-        {/* Problem/Solution Section */}
+        {/* Writing Styles Showcase */}
         <section className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                The AI Detection Problem
-              </h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <p>AI detectors are becoming more sophisticated, flagging legitimate AI-assisted content</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <p>Academic institutions and platforms penalize AI-generated content</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <p>Content authenticity concerns affect brand credibility</p>
-                </div>
-              </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Advanced Style Control with 4 Writing Modes
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Each style adapts your content perfectly for different audiences and purposes
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="flex justify-center gap-2 mb-8 flex-wrap">
+              {writingStyles.map((style) => (
+                <Button
+                  key={style.name}
+                  variant={activeStyle === style.name.toLowerCase() ? 'default' : 'outline'}
+                  onClick={() => setActiveStyle(style.name.toLowerCase())}
+                  className="mb-2"
+                >
+                  {style.name}
+                </Button>
+              ))}
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Our Solution
-              </h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <p>Advanced humanization algorithms that preserve meaning and quality</p>
+            
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5" />
+                  {writingStyles.find(s => s.name.toLowerCase() === activeStyle)?.name} Style
+                </CardTitle>
+                <CardDescription>
+                  {writingStyles.find(s => s.name.toLowerCase() === activeStyle)?.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                  <p className="text-gray-700 dark:text-gray-300 italic">
+                    "{writingStyles.find(s => s.name.toLowerCase() === activeStyle)?.example}"
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <p>Multiple writing styles to match your content needs</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
-                  <p>Real-time detection scoring to ensure effectiveness</p>
-                </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -210,14 +319,14 @@ const AiTextHumanizerSales = () => {
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Powerful Humanization Features
+              Professional Grammar Scoring with Actionable Improvements
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Everything you need to create undetectable, high-quality content
+              Advanced features that ensure your content meets the highest standards
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-0 shadow-lg">
                 <CardHeader>
@@ -236,90 +345,72 @@ const AiTextHumanizerSales = () => {
           </div>
         </section>
 
-        {/* How It Works */}
+        {/* Use Cases Section */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              How It Works
+              Trusted by Professionals Across Industries
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Simple 3-step process to humanize your AI content
+              See how different industries leverage our advanced humanization technology
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { step: "1", title: "Paste Your Content", description: "Copy and paste your AI-generated text into our editor" },
-              { step: "2", title: "Choose Style", description: "Select from Academic, Creative, Professional, Casual, or Marketing styles" },
-              { step: "3", title: "Get Humanized Text", description: "Receive undetectable, high-quality humanized content instantly" }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Flexible pricing for individuals and teams
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-blue-600">
-                    Most Popular
-                  </Badge>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="flex items-center justify-center">
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
-                    <span className="text-gray-600 dark:text-gray-300">{plan.period}</span>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
+                <CardHeader>
+                  <CardTitle className="text-xl flex items-center gap-2">
+                    <Users className="h-5 w-5 text-blue-600" />
+                    {useCase.title}
+                  </CardTitle>
+                  <CardDescription className="text-blue-600 dark:text-blue-400 font-medium">
+                    {useCase.subtitle}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-gray-600 dark:text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
-                    Get Started
-                  </Button>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-red-600 dark:text-red-400 mb-2">Common Challenges:</h4>
+                      <ul className="space-y-1">
+                        {useCase.challenges.map((challenge, idx) => (
+                          <li key={idx} className="text-sm text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                            <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
+                            {challenge}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">How We Help:</h4>
+                      <ul className="space-y-1">
+                        {useCase.benefits.map((benefit, idx) => (
+                          <li key={idx} className="text-sm text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                            <CheckCircle className="h-3 w-3 text-green-500 mt-1 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Enhanced Testimonials */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              What Our Users Say
+              Real Results from Real Professionals
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Join thousands of satisfied content creators
+              See the measurable impact our tool has on content quality and productivity
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
                 <CardContent className="p-6">
@@ -329,9 +420,13 @@ const AiTextHumanizerSales = () => {
                     ))}
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
+                  <div className="border-t pt-4">
                     <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}, {testimonial.company}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
+                    <p className="text-sm text-blue-600 dark:text-blue-400">{testimonial.company}</p>
+                    <Badge className="mt-2 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+                      {testimonial.results}
+                    </Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -339,39 +434,45 @@ const AiTextHumanizerSales = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Pricing Section */}
         <section className="py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Frequently Asked Questions
+              Choose Your Humanization Plan
             </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+              Professional-grade features with transparent, scalable pricing
+            </p>
           </div>
           
-          <div className="max-w-3xl mx-auto space-y-6">
-            {[
-              {
-                question: "How accurate is the AI detection bypass?",
-                answer: "Our humanization technology achieves a 95%+ success rate in bypassing major AI detectors including GPTZero, Originality.ai, and Turnitin."
-              },
-              {
-                question: "Does humanization affect content quality?",
-                answer: "No, our advanced algorithms preserve the original meaning and quality while making the text sound more natural and human-written."
-              },
-              {
-                question: "What types of content can be humanized?",
-                answer: "Our tool works with all types of text content including articles, essays, marketing copy, academic papers, and social media posts."
-              },
-              {
-                question: "Is there a free trial available?",
-                answer: "Yes, we offer a free trial with 1,000 words to test our humanization capabilities before choosing a paid plan."
-              }
-            ].map((faq, index) => (
-              <Card key={index} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
-                <CardHeader>
-                  <CardTitle className="text-lg">{faq.question}</CardTitle>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {pricingPlans.map((plan, index) => (
+              <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm`}>
+                {plan.popular && (
+                  <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-blue-600">
+                    {plan.highlight}
+                  </Badge>
+                )}
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <div className="flex items-center justify-center">
+                    <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
+                    <span className="text-gray-600 dark:text-gray-300">{plan.period}</span>
+                  </div>
+                  <CardDescription className="mt-2">{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300">{faq.answer}</p>
+                  <ul className="space-y-3 mb-6">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
+                    Start Free Trial
+                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -382,20 +483,23 @@ const AiTextHumanizerSales = () => {
         <section className="py-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Ready to Make Your AI Content Undetectable?
+              Ready to Transform Your AI Content?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Join thousands of content creators who trust our AI humanization technology
+              Join thousands of professionals who trust our advanced humanization technology for authentic, high-quality content
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 text-lg">
-                Start Free Trial
+                Start Free Trial - No Credit Card Required
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
-                View Live Demo
+                Schedule Demo
               </Button>
             </div>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+              14-day free trial • No setup fees • Cancel anytime
+            </p>
           </div>
         </section>
       </main>
