@@ -26,6 +26,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
 import Dmca from "./pages/Dmca";
+import DmcaTakedown from "./pages/DmcaTakedown";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/tools/ai-text-humanizer" element={<AiTextHumanizerSales />} />
             <Route path="/tools/image-verification" element={<ImageVerificationSales />} />
             <Route path="/tools/content-theft-detection" element={<ContentTheftDetectionSales />} />
+            <Route path="/dmca-takedown" element={<DmcaTakedown />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/help" element={<Help />} />

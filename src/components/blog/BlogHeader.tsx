@@ -81,6 +81,12 @@ export const BlogHeader: React.FC = () => {
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[300px]">
                     <div className="grid grid-cols-1 gap-3">
+                      <NavigationMenuLink href="/dmca-takedown" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">DMCA Takedown Notice</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Generate legal DMCA notices for free
+                        </p>
+                      </NavigationMenuLink>
                       <NavigationMenuLink href="/docs" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
                         <div className="text-sm font-medium leading-none">Documentation</div>
                         <p className="text-xs leading-snug text-muted-foreground">
@@ -91,6 +97,34 @@ export const BlogHeader: React.FC = () => {
                         <div className="text-sm font-medium leading-none">Support</div>
                         <p className="text-xs leading-snug text-muted-foreground">
                           Get help and contact support
+                        </p>
+                      </NavigationMenuLink>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[300px]">
+                    <div className="grid grid-cols-1 gap-3">
+                      <NavigationMenuLink href="/about" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">About Us</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Learn about our mission and team
+                        </p>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/contact" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Contact</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Get in touch with our team
+                        </p>
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/careers" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Careers</div>
+                        <p className="text-xs leading-snug text-muted-foreground">
+                          Join our growing team
                         </p>
                       </NavigationMenuLink>
                     </div>
