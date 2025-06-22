@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { BlogHeader } from '@/components/blog/BlogHeader';
 import { Footer } from '@/components/landing/Footer';
 import { Button } from '@/components/ui/button';
