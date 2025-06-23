@@ -3,6 +3,7 @@ import { BlogHeader } from '@/components/blog/BlogHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Footer } from '@/components/landing/Footer';
 import { 
   Search, 
   CheckCircle, 
@@ -159,51 +160,6 @@ const ContentTheftDetectionSales = () => {
       content: "The brand monitoring across social platforms gives us complete visibility. We catch competitor theft attempts before they damage our reputation.",
       rating: 5,
       results: "Complete brand protection across all platforms"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "For agencies, publishers, and growing businesses",
-      features: [
-        "Monitor up to 500 pieces of content",
-        "Daily scans across all platforms",
-        "Multi-language detection (40+ languages)",
-        "Basic DMCA templates",
-        "Social media monitoring",
-        "Email alerts and reporting",
-        "API access (5K requests/month)",
-        "Evidence preservation (1 year)",
-        "Standard support (24h response)"
-      ],
-      popular: true,
-      highlight: "Most Popular"
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month", 
-      description: "Complete IP protection for organizations",
-      features: [
-        "Unlimited content monitoring",
-        "Real-time scanning and alerts",
-        "Advanced multi-language detection",
-        "Automated DMCA filing system",
-        "Complete legal case management",
-        "Brand mention sentiment analysis",
-        "Evidence blockchain preservation",
-        "Domain authority assessment",
-        "Custom legal document generation",
-        "Full API access + webhooks",
-        "Priority phone support (2h response)",
-        "Dedicated account manager",
-        "Legal consultation included"
-      ],
-      popular: false,
-      highlight: "Enterprise Ready"
     }
   ];
 
@@ -596,75 +552,32 @@ const ContentTheftDetectionSales = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Complete IP Protection Plans
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Choose the right level of protection for your content and intellectual property
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-green-600">
-                    {plan.highlight}
-                  </Badge>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="flex items-center justify-center">
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
-                    <span className="text-gray-600 dark:text-gray-300">{plan.period}</span>
-                  </div>
-                  <CardDescription className="mt-2">{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
-                    Start Protection Trial
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Final CTA */}
+        {/* Final CTA Section */}
         <section className="py-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Stop Losing Money to Content Thieves Today
+              Ready to Protect Your Content?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Join thousands of creators, agencies, and legal professionals protecting their valuable intellectual property with automated enforcement
+              Join thousands who trust our advanced content monitoring and protection system to safeguard their intellectual property
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 text-lg">
-                Start Free Trial - Protect Your First 10 Items Free
+                Start Free Trial - No Credit Card Required
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
-                Schedule Legal Consultation
+                Schedule Demo
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-              Free trial includes 10 content monitoring • Legal consultation available • No long-term contracts
+              14-day free trial • No setup fees • Cancel anytime
             </p>
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 };

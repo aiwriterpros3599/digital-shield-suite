@@ -3,6 +3,7 @@ import { BlogHeader } from '@/components/blog/BlogHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Footer } from '@/components/landing/Footer';
 import { 
   Image, 
   CheckCircle, 
@@ -137,49 +138,6 @@ const ImageVerificationSales = () => {
       content: "This tool sets the gold standard for image authentication. The technical accuracy combined with user-friendly interface makes it indispensable.",
       rating: 5,
       results: "Research integrity increased 40%"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "For newsrooms, legal firms, and content creators",
-      features: [
-        "200 image verifications/month",
-        "Advanced deepfake detection (99.7% accuracy)",
-        "Basic blockchain verification",
-        "Standard forensic reports",
-        "Social media integration",
-        "Email support (24h response)",
-        "API access (1K requests/month)",
-        "Batch processing (up to 10 images)"
-      ],
-      popular: true,
-      highlight: "Most Popular"
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "Complete solution for organizations and institutions",
-      features: [
-        "Unlimited image verifications",
-        "All detection types (deepfake, manipulation, style transfer)",
-        "Advanced blockchain verification",
-        "Court-ready forensic reports",
-        "Real-time video analysis",
-        "Live camera analysis",
-        "Priority phone support (2h response)",
-        "Full API access + webhooks",
-        "Unlimited batch processing",
-        "Custom integrations",
-        "Dedicated account manager",
-        "Legal consultation included"
-      ],
-      popular: false,
-      highlight: "Enterprise Ready"
     }
   ];
 
@@ -443,75 +401,32 @@ const ImageVerificationSales = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Professional Image Verification Plans
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Choose the right level of protection for your organization
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-purple-600">
-                    {plan.highlight}
-                  </Badge>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="flex items-center justify-center">
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
-                    <span className="text-gray-600 dark:text-gray-300">{plan.period}</span>
-                  </div>
-                  <CardDescription className="mt-2">{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
-                    Start Free Trial
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         {/* Final CTA Section */}
         <section className="py-16 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Protect Your Organization from Synthetic Media Threats
+              Ready to Verify Image Authenticity?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Join industry leaders who trust our advanced deepfake detection and blockchain verification technology
+              Join professionals who trust our advanced AI detection and forensic analysis for authentic visual content
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg">
-                Start Free Trial - Verify First 10 Images Free
+                Start Free Trial - No Credit Card Required
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
-                Request Demo
+                Schedule Demo
               </Button>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-              Free trial includes 10 image verifications • No credit card required • Enterprise consulting available
+              14-day free trial • No setup fees • Cancel anytime
             </p>
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 };

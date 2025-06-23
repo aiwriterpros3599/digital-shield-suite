@@ -3,6 +3,7 @@ import { BlogHeader } from '@/components/blog/BlogHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Footer } from '@/components/landing/Footer';
 import { 
   FileText, 
   CheckCircle, 
@@ -133,50 +134,6 @@ const AiTextHumanizerSales = () => {
       content: "SEO optimization mode is incredible - it preserves our target keywords while making AI content completely undetectable. Our rankings improved 30%.",
       rating: 5,
       results: "30% search ranking improvement"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for individual creators and small teams",
-      features: [
-        "500 humanizations/month (5K chars each)",
-        "4 writing styles with tone adjustment",
-        "SEO optimization mode",
-        "Built-in plagiarism checker",
-        "Grammar & readability scoring",
-        "Version control & history",
-        "Team collaboration (3 members)",
-        "API access (1K requests/month)",
-        "Priority support (12h response)"
-      ],
-      popular: true,
-      highlight: "Most Popular"
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Advanced features for agencies and enterprises",
-      features: [
-        "Unlimited humanizations (10K chars each)",
-        "All writing styles + custom tones",
-        "Advanced SEO optimization",
-        "Professional plagiarism detection",
-        "Advanced grammar analysis",
-        "Complete version management",
-        "Unlimited team members",
-        "Full API access + webhooks",
-        "Batch processing capabilities",
-        "White-label options",
-        "Dedicated account manager",
-        "Phone support (2h response)"
-      ],
-      popular: false,
-      highlight: "Enterprise Ready"
     }
   ];
 
@@ -433,51 +390,6 @@ const AiTextHumanizerSales = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Choose Your Humanization Plan
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Professional-grade features with transparent, scalable pricing
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-blue-600">
-                    {plan.highlight}
-                  </Badge>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="flex items-center justify-center">
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</span>
-                    <span className="text-gray-600 dark:text-gray-300">{plan.period}</span>
-                  </div>
-                  <CardDescription className="mt-2">{plan.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant={plan.popular ? 'default' : 'outline'}>
-                    Start Free Trial
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         {/* Final CTA Section */}
         <section className="py-16 text-center">
           <div className="max-w-3xl mx-auto">
@@ -502,6 +414,8 @@ const AiTextHumanizerSales = () => {
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 };

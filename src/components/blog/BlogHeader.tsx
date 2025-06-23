@@ -87,14 +87,8 @@ export const BlogHeader: React.FC = () => {
                           Generate legal DMCA notices for free
                         </p>
                       </NavigationMenuLink>
-                      <NavigationMenuLink href="/docs" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                        <div className="text-sm font-medium leading-none">Documentation</div>
-                        <p className="text-xs leading-snug text-muted-foreground">
-                          API docs and integration guides
-                        </p>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink href="/support" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
-                        <div className="text-sm font-medium leading-none">Support</div>
+                      <NavigationMenuLink href="/help" className="group grid h-auto w-full justify-start gap-1 rounded-md bg-background p-4 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50">
+                        <div className="text-sm font-medium leading-none">Help Center</div>
                         <p className="text-xs leading-snug text-muted-foreground">
                           Get help and contact support
                         </p>
