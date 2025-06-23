@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/components/auth/AuthProvider";
 import { AuthGuard } from "@/components/auth/AuthGuard";
 import { SignupForm } from "@/components/auth/SignupForm";
+import { HelpArticlePage } from "@/components/help/HelpArticlePage";
 import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import Humanizer from "./pages/Humanizer";
@@ -22,6 +22,7 @@ import ThankYou from "./pages/ThankYou";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Help from "./pages/Help";
+import HelpSearch from "./pages/HelpSearch";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
@@ -49,6 +50,8 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/help" element={<Help />} />
+            <Route path="/help/search" element={<HelpSearch />} />
+            <Route path="/help/article/:slug" element={<HelpArticlePage />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
